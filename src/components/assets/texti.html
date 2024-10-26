@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Animation</title>
+    <link
+      href="//fonts.googleapis.com/css?family=Signika+Negative:300,400"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-family: 'Signika Negative', sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      h1 span {
+        color: red;
+        font-weight: 400;
+      }
+
+      .cursor {
+        display: inline-block;
+        width: 2px;
+        height: 1em;
+        background-color: red;
+        margin-left: 2px;
+        animation: blink 0.7s infinite;
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>I am a <br><span></span><span class="cursor"></span></h1>
+    </div>
+    <script>
+      const textArray = ["Yogi", "Web Developer", "UI/UX Designer"];
+      let currentIndex = 0;
+      const spanElement = document.querySelector("h1 span");
+
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      async function typeText(text) {
+        for (let i = 0; i <= text.length; i++) {
+          spanElement.textContent = text.slice(0, i);
+          await sleep(100);
+        }
+      }
+
+      async function eraseText(text) {
+        for (let i = text.length; i >= 0; i--) {
+          spanElement.textContent = text.slice(0, i);
+          await sleep(50);
+        }
+      }
+
+      async function animateText() {
+        while (true) {
+          const text = textArray[currentIndex];
+          await typeText(text);
+          await sleep(1500);
+          await eraseText(text);
+          currentIndex = (currentIndex + 1) % textArray.length;
+          await sleep(500);
+        }
+      }
+
+      animateText();
+    </script>
+  </body>
+</html>

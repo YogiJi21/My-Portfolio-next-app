@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scroll Snap</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+        section {
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            transition: transform 1.5s ease-in-out; /* Increased transition duration for smoother effect */
+        }
+        .one { 
+            background: url("./food-4k-3gsi5u6kjma5zkj0.jpg") no-repeat center fixed;
+            background-size: cover;
+        }
+        .two { 
+            background: url("./home-bg.jpg") no-repeat center fixed;
+            background-size: cover;
+        }
+        .three { 
+            background: url("./twig-near-ceramic-cups.jpg") no-repeat center fixed;
+            background-size: cover;
+        }
+        .four { 
+            background: url("./img2.jpg") no-repeat center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="one"><h1>First page</h1></section>
+        <section class="two"><h1>Second page</h1></section>
+        <section class="three"><h1>Third page</h1></section>
+        <section class="four"><h1>Fourth page</h1></section>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            container.scrollBy({
+                top: e.deltaY * 0.2, // Further reduced multiplier for slower scrolling
+                behavior: 'smooth'
+            });
+        }, { passive: false });
+    </script>
+</body>
+</html>
