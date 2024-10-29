@@ -4,9 +4,9 @@ import ecotrac from "./assets/Ecotrac.png";
 import tourifyImage from './assets/tourify.png';
 import zammyImage from './assets/zammy.png';
 import multiplexImage from './assets/multiplex.png';
+
 export default function App() {
-    const defaultContent =
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+    
 
     return (
         <Accordion className="text-[.8rem]" variant="bordered">
@@ -19,8 +19,8 @@ export default function App() {
                     width={1050}
                     height={1050}
                 />
-                Eco Tracker Web Application based on MERN stack :It basically calculates carbon emission of your daily activities and also
-                provide suggestions to Reduce CO2 footprint.
+                Eco Tracker Web Application based on MERN stack: It basically calculates carbon emission of your daily activities and also
+                provides suggestions to reduce CO2 footprint.
             </AccordionItem>
 
             <AccordionItem className="border-b-[1px] border-b-solid border-b-[rgba(255,255,255,.3)]"
@@ -32,8 +32,8 @@ export default function App() {
                     width={1050}
                     height={1050}
                 />
-                Developed a comprehensive tourism website offering features like hotel search, bookings, virtual tours, flight bookings and
-                user-submitted local stories with the help Google API.
+                Developed a comprehensive tourism website offering features like hotel search, bookings, virtual tours, flight bookings, and
+                user-submitted local stories with the help of the Google API.
             </AccordionItem>
 
             <AccordionItem className="border-b-[1px] border-b-solid border-b-[rgba(255,255,255,.3)]" key="3" aria-label="Accordion 3" title="Zammy News">
@@ -44,7 +44,7 @@ export default function App() {
                     width={1050}
                     height={1050}
                 />
-                Designed a website using React Framework and Google's news API displaying current news on sub-topics listed in nav-bar.
+                Designed a website using the React Framework and Google's news API displaying current news on sub-topics listed in the nav-bar.
             </AccordionItem>
 
             <AccordionItem key="4" aria-label="Accordion 4" title="Multiplex Management System">
@@ -55,7 +55,7 @@ export default function App() {
                     width={1050}
                     height={1050}
                 />
-                Developed a Project using .NET utilizing MySQL for data management. Specializes in developing efficient and user-friendly
+                Developed a project using .NET utilizing MySQL for data management. Specializes in developing efficient and user-friendly
                 solutions with a focus on security and performance optimization.
             </AccordionItem>
         </Accordion>
