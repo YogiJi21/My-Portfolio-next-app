@@ -6,6 +6,7 @@ import port_image from "./assets/my portfolio main pic.jpg";
 
 const PortfolioPage: React.FC = () => {
   const [text, setText] = useState("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isTyping, setIsTyping] = useState(true);
   const textArray = ["Yogi", "Web Developer", "UI/UX Designer"];
   const [currentIndex, setCurrentIndex] = useState(0);

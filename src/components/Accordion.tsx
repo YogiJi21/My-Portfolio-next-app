@@ -44,6 +44,7 @@ export default function App() {
                     width={1050}
                     height={1050}
                 />
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 Designed a website using the React Framework and Google's news API displaying current news on sub-topics listed in the nav-bar.
             </AccordionItem>
 

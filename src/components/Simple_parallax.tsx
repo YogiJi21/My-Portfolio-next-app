@@ -5,7 +5,6 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'next/image';
 
 // Import images
 import image1 from './assets/panch.jpg';

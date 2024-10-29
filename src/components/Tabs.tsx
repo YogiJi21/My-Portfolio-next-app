@@ -3,10 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Tabs } from "./ui/tabs";
-import { div } from "framer-motion/m";
 import abt_image from "./assets/aesthetic-anime-character-gaming.jpg";
-import { CardHoverEffectDemo } from "./CardHoverEffect";
-import { StickyScrollRevealDemo } from "./StickyScrollReveal";
+
 import Projectlist from "@/components/Accordion";
 export default function TabsDemo() {
   const [isMounted, setIsMounted] = useState(false);
