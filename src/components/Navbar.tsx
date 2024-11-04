@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
+import nxjs from "../components/assets/nextjs.webp"
 
 
 export default function Navbar({ className }: { className?: string }) {
@@ -61,35 +62,35 @@ export default function Navbar({ className }: { className?: string }) {
               <MenuItem setActive={setActive} active={active} item="Projects">
                 <div className="flex flex-col space-y-4 text-sm">
                   <HoveredLink href="/web-dev">Web Development</HoveredLink>
-                  <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-                  <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-                  <HoveredLink href="/branding">Branding</HoveredLink>
+                  <HoveredLink href="/interface-design">UI/UX Design</HoveredLink>
+                  <HoveredLink href="/seo">.Net</HoveredLink>
+                  <HoveredLink href="/branding">Machine Learning</HoveredLink>
                 </div>
               </MenuItem>
               <MenuItem setActive={setActive} active={active} item="Extras">
                 <div className="text-sm grid grid-cols-2 gap-10 p-4">
                   <ProductItem
-                    title="Algochurn"
+                    title="Certifications"
                     href="https://algochurn.com"
-                    src="https://assets.aceternity.com/demos/algochurn.webp"
+                    src="https://images.pexels.com/photos/8112168/pexels-photo-8112168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     description="Prepare for tech interviews like never before."
                     />
                   <ProductItem
-                    title="Tailwind Master Kit"
+                    title="Hobbies & Interests"
                     href="https://tailwindmasterkit.com"
-                    src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                    src="https://images.pexels.com/photos/346726/pexels-photo-346726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     description="Production ready Tailwind css components for your next project"
                     />
                   <ProductItem
-                    title="Moonbeam"
+                    title="Learning Journey "
                     href="https://gomoonbeam.com"
-                    src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+                    src="https://images.pexels.com/photos/6549918/pexels-photo-6549918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     description="Never write from scratch again. Go from idea to blog in minutes."
                     />
                   <ProductItem
-                    title="Rogue"
+                    title="Favorite Tech Stack"
                     href="https://userogue.com"
-                    src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+                    src={nxjs}
                     description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
                     />
                 </div>

@@ -21,7 +21,8 @@ const nextConfig = {
   images: {
     domains: [
       'assets.aceternity.com', 
-      'aceternity.com', 
+      'aceternity.com',
+      'images.pexels.com', 
       'images.unsplash.com' // Add Unsplash domain here
     ],
   },

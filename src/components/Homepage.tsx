@@ -71,23 +71,26 @@ const PortfolioPage: React.FC = () => {
           <span className="cursor"></span>
         </h1>
         <p className="text-white/60 text-sm md:text-base lg:text-lg mb-6 md:mb-8 lg:mb-10">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit possimus et iste sequi minima, ullam, provident quis labore aliquid ipsam a assumenda. Provident iste blanditiis libero? Nesciunt a id unde.
+        Passionate software developer with expertise in React and .NET, and hands-on experience in Python, Java, and MongoDB. Dedicated to practical skills and continuous learning, eager to make impactful contributions in tech.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
-          <button className="p-[3px] relative">
+          {/* <button className="p-[3px] relative">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-green-500 rounded-3xl" />
             <div className="px-6 md:px-8 py-2 rounded-lg relative group transition duration-200 text-white hover:bg-transparent">
               Hire Me
             </div>
-          </button>
+          </button> */}
+          <HireMeButton/>
 
-          <button className="p-[3px] relative">
+          <a className="" href="cv.pdf" download>
+          <button className="p-[3px] relative w-full">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-green-500 rounded-3xl" />
             <div className="px-6 md:px-8 py-2 bg-black rounded-[20px] relative group transition duration-200 text-white hover:bg-transparent">
               Download CV
             </div>
           </button>
+          </a>
         </div>
       </div>
       <div className="right_side flex justify-center items-center mt-8 md:mt-0">
@@ -116,5 +119,91 @@ const PortfolioPage: React.FC = () => {
     </div>
   );
 };
+
+
+const HireMeButton = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
+  return (
+    <div className="flex justify-center">
+      <div className="w-full">
+      <button
+          onClick={openModal}
+       className="p-[3px] w-full relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-green-500 rounded-3xl" />
+            <div className="px-6 md:px-8 py-2 rounded-lg relative group transition duration-200 text-white hover:bg-transparent">
+              Hire Me
+            </div>
+          </button>
+
+        {/* Modal */}
+        {isModalOpen && (
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="bg-gray-900 p-8 rounded-lg shadow-lg w-full max-w-md">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-semibold text-white">Connect with Me</h2>
+                <button
+                  className="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                  onClick={closeModal}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-gray-400 mb-2">Check out my LinkedIn profile:</p>
+                  <a
+                    href="https://www.linkedin.com/in/yogesh-hingorani-b19307243"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:text-blue-400 underline inline-block"
+                  >
+                    LinkedIn Profile
+                  </a>
+                </div>
+                <div>
+                  <p className="text-gray-400 mb-2">Or contact me directly:</p>
+                  <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=yogi.hingorani21@gmail.com"
+                        target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:text-blue-400 underline inline-block"
+                  >
+                    Email Me
+                  </a>
+                </div>
+              </div>
+              <div className="mt-6 flex justify-end">
+                <button
+                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 transition-colors duration-300"
+                  onClick={closeModal}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
 
 export default PortfolioPage;

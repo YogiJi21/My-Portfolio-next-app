@@ -13,8 +13,8 @@ export default function TabsDemo() {
       title: "Skills",
       value: "skills",
       content: (
-        <div className="w-full h-[500px] overflow-hidden relative  rounded-2xl p-10 lg:h-[500px] text-white bg-[#161515]">
-          <DummyContent />
+        <div className="w-full h-[500px] overflow-hidden relative  rounded-2xl p-5 lg:h-[500px] text-white bg-[#161515]">
+          <SkillsRating/>
           {/* <CardHoverEffectDemo/> */}
         </div>
       ),
@@ -85,42 +85,6 @@ export default function TabsDemo() {
   );
 }
 
-const DummyContent = () => {
-  return (
-    // <div className="flex flex-wrap gap-4">
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">TypeScript</p>
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">JavaScript</p>
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">Python</p>
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">React JS</p>
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">NodeJS</p>
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">C/C++</p>
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">Java</p>
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">MongoDB</p>
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">SQL</p>
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">.Net</p>
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">Html</p>
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">CSS</p>
-    //   <p className="border-[1px] border-[#009688] px-2 py-1 rounded-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 ">Communication skills</p>
-    // </div>
- <ul className="list-disc text-[.8rem] lg:text-[1rem] text-white space-y-2 pl-5">
-  <li>TypeScript</li>
-  <li>JavaScript</li>
-  <li>Python</li>
-  <li>React JS</li>
-  <li>NodeJS</li>
-  <li>C/C++</li>
-  <li>Java</li>
-  <li>MongoDB</li>
-  <li>SQL</li>
-  <li>.Net</li>
-  <li>Html</li>
-  <li>CSS</li>
-  <li>Communication skills</li>
-</ul> 
-
-
-  );
-};
 
 const EducationContent = () => {
   return (
@@ -133,7 +97,7 @@ const EducationContent = () => {
     <p className="">08/2024</p>
     <p className="mt-2 font-bold ">CGPA: 7.4</p>
   </div>
-
+ 
   {/* Card 2: Bachelors */}
   <div className="bg-[#181717]  shadow-lg rounded-lg p-6">
     <h2 className="text-xl font-semibold">Bangalore University</h2>
@@ -144,5 +108,51 @@ const EducationContent = () => {
   </div>
 </div>
 
+  );
+};
+
+const SkillsRating = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  const skills = [
+    { name: 'TypeScript', rating: 8 },
+    { name: 'JavaScript', rating: 9 },
+    { name: 'Python', rating: 9 },
+    { name: 'React JS', rating: 9 },
+    { name: 'NodeJS', rating: 8 },
+    { name: 'C/C++', rating: 8 },
+    { name: 'Java', rating: 9 },
+    { name: 'MongoDB', rating: 8 },
+    { name: 'SQL', rating: 8 },
+    { name: '.Net', rating: 8 },
+    { name: 'HTML', rating: 9 },
+    { name: 'CSS', rating: 9 },
+    { name: 'Communication skills', rating: 10 }
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <div className="w-full max-w-xl p-2 lg:px-6 lg:py-1 space-y-4 lg:h-[470px] overflow-y-auto scrollbar-hide">
+      {skills.map((skill, index) => (
+        <div key={skill.name} className="space-y-2">
+          <div className="flex justify-between">
+            <span className="text-sm font-medium">{skill.name}</span>
+            <span className="text-sm font-medium">{skill.rating}/10</span>
+          </div>
+          <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div 
+              className="h-full bg-gradient-to-r from-blue-500 to-green-500 rounded-full transition-all duration-1000 ease-out"
+              style={{
+                width: isVisible ? `${(skill.rating / 10) * 100}%` : '0%',
+                transitionDelay: `${index * 100}ms`
+              }}
+            />
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
