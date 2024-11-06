@@ -53,7 +53,7 @@ export default function Navbar({ className }: { className?: string }) {
             <button onClick={toggleMenu} className="text-white text-3xl">
               ☰
             </button>
-          ) : (
+          ) : ( 
             isMounted && (
             <div style={{}}>
 

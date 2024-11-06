@@ -3,77 +3,83 @@
 @tailwind utilities;
 
 :root {
-  /* Set dark mode colors directly */
-  --background: #0a0a0a; /* Dark background */
-  --foreground: #ededed; /* Light text color */
+  --background: #0a0a0a;
+    --foreground: #ededed;
+}
 
-  /* Dark Mode Tailwind Colors */
-  --tw-blue-50: #1e3a8a; /* Adjusted */
-  --tw-blue-100: #1e40af; /* Adjusted */
-  --tw-blue-200: #1d4ed8; /* Adjusted */
-  --tw-blue-300: #2563eb; /* Adjusted */
-  --tw-blue-400: #3b82f6; /* Adjusted */
-  --tw-blue-500: #60a5fa; /* Adjusted */
-  --tw-blue-600: #93c5fd; /* Adjusted */
-  --tw-blue-700: #bfdbfe; /* Adjusted */
-  --tw-blue-800: #dbeafe; /* Adjusted */
-  --tw-blue-900: #eff6ff; /* Adjusted */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
 
-  --tw-green-50: #14532d; /* Adjusted */
-  --tw-green-100: #166534; /* Adjusted */
-  --tw-green-200: #15803d; /* Adjusted */
-  --tw-green-300: #16a34a; /* Adjusted */
-  --tw-green-400: #22c55e; /* Adjusted */
-  --tw-green-500: #4ade80; /* Adjusted */
-  --tw-green-600: #86efac; /* Adjusted */
-  --tw-green-700: #bbf7d0; /* Adjusted */
-  --tw-green-800: #dcfce7; /* Adjusted */
-  --tw-green-900: #f0fdf4; /* Adjusted */
-
-  --tw-red-50: #641e16; /* Adjusted */
-  --tw-red-100: #7f1d1d; /* Adjusted */
-  --tw-red-200: #991b1b; /* Adjusted */
-  --tw-red-300: #b91c1c; /* Adjusted */
-  --tw-red-400: #dc2626; /* Adjusted */
-  --tw-red-500: #ef4444; /* Adjusted */
-  --tw-red-600: #f87171; /* Adjusted */
-  --tw-red-700: #fca5a5; /* Adjusted */
-  --tw-red-800: #fecaca; /* Adjusted */
-  --tw-red-900: #fee2e2; /* Adjusted */
-
-  --tw-yellow-50: #78350f; /* Adjusted */
-  --tw-yellow-100: #92400e; /* Adjusted */
-  --tw-yellow-200: #b45309; /* Adjusted */
-  --tw-yellow-300: #d97706; /* Adjusted */
-  --tw-yellow-400: #f59e0b; /* Adjusted */
-  --tw-yellow-500: #ffc107; /* Adjusted */
-  --tw-yellow-600: #fcdc68; /* Adjusted */
-  --tw-yellow-700: #fef08a; /* Adjusted */
-  --tw-yellow-800: #fef9c3; /* Adjusted */
-  --tw-yellow-900: #fefce8; /* Adjusted */
-
-  --tw-gray-50: #111827; /* Adjusted */
-  --tw-gray-100: #374151; /* Adjusted */
-  --tw-gray-200: #4b5563; /* Adjusted */
-  --tw-gray-300: #6b7280; /* Adjusted */
-  --tw-gray-400: #9ca3af; /* Adjusted */
-  --tw-gray-500: #d1d5db; /* Adjusted */
-  --tw-gray-600: #e5e7eb; /* Adjusted */
-  --tw-gray-700: #f3f4f6; /* Adjusted */
-  --tw-gray-800: #f9fafb; /* Adjusted */
-  --tw-gray-900: #ffffff; /* Adjusted */
-
-  /* Dark Mode Bootstrap Colors */
-  --bs-primary: #0d6efd; /* Same for dark mode */
-  --bs-secondary: #6c757d; /* Same for dark mode */
-  --bs-success: #198754; /* Same for dark mode */
-  --bs-info: #0dcaf0; /* Same for dark mode */
-  --bs-warning: #ffc107; /* Same for dark mode */
-  --bs-danger: #dc3545; /* Same for dark mode */
-  --bs-light: #212529; /* Dark gray */
-  --bs-dark: #f8f9fa; /* Light gray */
-  --bs-white: #ffffff; /* Same for dark mode */
-  --bs-black: #000000; /* Same for dark mode */
+     /* Dark Mode Tailwind Colors */
+     --tw-blue-50: #1e3a8a; /* Adjusted */
+     --tw-blue-100: #1e40af; /* Adjusted */
+     --tw-blue-200: #1d4ed8; /* Adjusted */
+     --tw-blue-300: #2563eb; /* Adjusted */
+     --tw-blue-400: #3b82f6; /* Adjusted */
+     --tw-blue-500: #60a5fa; /* Adjusted */
+     --tw-blue-600: #93c5fd; /* Adjusted */
+     --tw-blue-700: #bfdbfe; /* Adjusted */
+     --tw-blue-800: #dbeafe; /* Adjusted */
+     --tw-blue-900: #eff6ff; /* Adjusted */
+ 
+     --tw-green-50: #14532d; /* Adjusted */
+     --tw-green-100: #166534; /* Adjusted */
+     --tw-green-200: #15803d; /* Adjusted */
+     --tw-green-300: #16a34a; /* Adjusted */
+     --tw-green-400: #22c55e; /* Adjusted */
+     --tw-green-500: #4ade80; /* Adjusted */
+     --tw-green-600: #86efac; /* Adjusted */
+     --tw-green-700: #bbf7d0; /* Adjusted */
+     --tw-green-800: #dcfce7; /* Adjusted */
+     --tw-green-900: #f0fdf4; /* Adjusted */
+ 
+     --tw-red-50: #641e16; /* Adjusted */
+     --tw-red-100: #7f1d1d; /* Adjusted */
+     --tw-red-200: #991b1b; /* Adjusted */
+     --tw-red-300: #b91c1c; /* Adjusted */
+     --tw-red-400: #dc2626; /* Adjusted */
+     --tw-red-500: #ef4444; /* Adjusted */
+     --tw-red-600: #f87171; /* Adjusted */
+     --tw-red-700: #fca5a5; /* Adjusted */
+     --tw-red-800: #fecaca; /* Adjusted */
+     --tw-red-900: #fee2e2; /* Adjusted */
+ 
+     --tw-yellow-50: #78350f; /* Adjusted */
+     --tw-yellow-100: #92400e; /* Adjusted */
+     --tw-yellow-200: #b45309; /* Adjusted */
+     --tw-yellow-300: #d97706; /* Adjusted */
+     --tw-yellow-400: #f59e0b; /* Adjusted */
+     --tw-yellow-500: #ffc107; /* Adjusted */
+     --tw-yellow-600: #fcdc68; /* Adjusted */
+     --tw-yellow-700: #fef08a; /* Adjusted */
+     --tw-yellow-800: #fef9c3; /* Adjusted */
+     --tw-yellow-900: #fefce8; /* Adjusted */
+ 
+     --tw-gray-50: #111827; /* Adjusted */
+     --tw-gray-100: #374151; /* Adjusted */
+     --tw-gray-200: #4b5563; /* Adjusted */
+     --tw-gray-300: #6b7280; /* Adjusted */
+     --tw-gray-400: #9ca3af; /* Adjusted */
+     --tw-gray-500: #d1d5db; /* Adjusted */
+     --tw-gray-600: #e5e7eb; /* Adjusted */
+     --tw-gray-700: #f3f4f6; /* Adjusted */
+     --tw-gray-800: #f9fafb; /* Adjusted */
+     --tw-gray-900: #ffffff; /* Adjusted */
+ 
+     /* Dark Mode Bootstrap Colors */
+     --bs-primary: #0d6efd; /* Use same for dark mode */
+     --bs-secondary: #6c757d; /* Use same for dark mode */
+     --bs-success: #198754; /* Use same for dark mode */
+     --bs-info: #0dcaf0; /* Use same for dark mode */
+     --bs-warning: #ffc107; /* Use same for dark mode */
+     --bs-danger: #dc3545; /* Use same for dark mode */
+     --bs-light: #212529; /* Use dark gray for contrast */
+     --bs-dark: #f8f9fa; /* Use light gray for contrast */
+     --bs-white: #ffffff; /* Use same for dark mode */
+     --bs-black: #000000; /* Use same for dark mode */
+  }
 }
 
 body {
@@ -81,7 +87,6 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-
 
 @layer utilities {
   .text-balance {

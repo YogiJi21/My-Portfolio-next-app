@@ -37,7 +37,7 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer font-semibold text-white opacity-[.8] hover:opacity-[0.6] dark:text-white"
+        className="cursor-pointer font-semibold text-white opacity-[.8] hover:opacity-[0.6]"
       >
         {item}
       </motion.p>
@@ -51,10 +51,10 @@ export const MenuItem = ({
         >
           {children && active === item && (
             <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
-              <motion.div
+              <motion.div 
                 transition={transition}
                 layoutId="active"
-                className="bg-[rgba(0,0,0,0.5)] backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                className="bg-[rgba(0,0,0,0.5)] backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.2] shadow-xl"
               >
                 <motion.div layout className="w-max h-full p-4">
                   {children}
@@ -106,10 +106,10 @@ export const ProductItem = ({
         className="flex-shrink-0 rounded-md shadow-2xl"
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
+        <h4 className="text-xl font-bold mb-1 text-white">
           {title}
         </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
+        <p className="text-sm max-w-[10rem] text-neutral-300">
           {description}
         </p>
       </div>
@@ -121,7 +121,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black "
+      className=" text-neutral-400 hover:text-white  "
     >
       {children}
     </Link>
