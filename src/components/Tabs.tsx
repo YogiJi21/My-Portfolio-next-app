@@ -135,8 +135,9 @@ const SkillsRating = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-xl p-2 lg:px-6 lg:py-1 space-y-4 lg:h-[470px] overflow-y-auto scrollbar-hide">
-      {skills.map((skill, index) => (
+<div className="w-full max-w-xl p-2 lg:px-6 lg:py-1 space-y-4 h-[470px] overflow-y-auto lg:scrollbar-hide">
+
+    {skills.map((skill, index) => (
         <div key={skill.name} className="space-y-2">
           <div className="flex justify-between">
             <span className="text-sm font-medium">{skill.name}</span>
