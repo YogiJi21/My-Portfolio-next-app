@@ -48,7 +48,7 @@ export default function Navbar({ className }: { className?: string }) {
     >
       <div className="container mx-auto px-4">
         <div style={{}} className="grid grid-cols-[95%_5%] lg:grid-cols-[30%_70%]">
-          <h1 style={{alignItems:'center'}} className="text-2xl flex justify-center py-3  font-bold text-white">Port</h1>
+          <h1 style={{alignItems:'center'}} className="text-2xl flex justify-center py-3  font-bold text-white">Portfolio</h1>
           {isMounted &&  isMobile ? (
             <button onClick={toggleMenu} className="text-white text-3xl">
               ☰
