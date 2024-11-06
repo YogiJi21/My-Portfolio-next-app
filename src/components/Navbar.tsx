@@ -119,9 +119,9 @@ export default function Navbar({ className }: { className?: string }) {
               {active === "Projects" && (
                 <div className="ml-4 mt-2 space-y-2">
                   <Link href="/web-dev" className="block text-white py-1">Web Development</Link>
-                  <Link href="/interface-design" className="block text-white py-1">Interface Design</Link>
-                  <Link href="/seo" className="block text-white py-1">Search Engine Optimization</Link>
-                  <Link href="/branding" className="block text-white py-1">Branding</Link>
+                  <Link href="/interface-design" className="block text-white py-1">UI/UX Design</Link>
+                  <Link href="/seo" className="block text-white py-1">.Net</Link>
+                  <Link href="/branding" className="block text-white py-1">Machine Learning</Link>
                 </div>
               )}
             </div>
@@ -132,10 +132,10 @@ export default function Navbar({ className }: { className?: string }) {
               </button>
               {active === "Extras" && (
                 <div className="ml-4 mt-2 space-y-2">
-                  <Link href="https://algochurn.com" className="block text-white py-1">Algochurn</Link>
-                  <Link href="https://tailwindmasterkit.com" className="block text-white py-1">Tailwind Master Kit</Link>
-                  <Link href="https://gomoonbeam.com" className="block text-white py-1">Moonbeam</Link>
-                  <Link href="https://userogue.com" className="block text-white py-1">Rogue</Link>
+                  <Link href="https://algochurn.com" className="block text-white py-1">Certifications</Link>
+                  <Link href="https://tailwindmasterkit.com" className="block text-white py-1">Hobbies & Interests</Link>
+                  <Link href="https://gomoonbeam.com" className="block text-white py-1">Learning Journey</Link>
+                  <Link href="https://userogue.com" className="block text-white py-1">Favorite Tech Stack</Link>
                 </div>
               )}
             </div>
