@@ -4,6 +4,7 @@ import React from 'react'
 import  ThreeDCardDemo  from './ThreeDCardDemo';
 import ecotracImage from './assets/Ecotrac.png';
 import tourifyImage from './assets/tourify.png';
+import portfolioImage from './assets/portfolio.png';
 import zammyImage from './assets/zammy.png';
 import multiplexImage from './assets/multiplex.png';
 export default function ProjectSection() {
@@ -11,32 +12,40 @@ export default function ProjectSection() {
   const projectsData = [
     {
       id: 1,
-      title: "Eco - Tracker React App",
-      brief: "Eco Tracker Web Application based on MERN stack: It basically calculates carbon emission of your daily activities and also provide suggestions to Reduce CO2 footprint.",
-      imageSrc: ecotracImage,
-      detailsLink: "https://twitter.com/mannupaaji",
-      githubLink: "#"
+      title: "My Portfolio Next App",
+      brief: "Engineered a portfolio app deployed on Vercel, leveraging Next.js 15 for dynamic content, Next UI for design, and Acertainty UI for an engaging user experience. This app highlights personal projects and enables easy access to a downloadable resume, contact nfo, and social links.",
+      imageSrc: portfolioImage,
+      detailsLink: "https://github.com/YogiJi21/My-Portfolio-next-app/blob/da9a2587c849662b5d2115952f637697a1609fdb/README.md",
+      githubLink: "https://github.com/YogiJi21/My-Portfolio-next-app.git"
     },
     {
       id: 2,
       title: "Tourify",
-      brief: "Developed a comprehensive tourism website offering features like hotel search, bookings, virtual tours, flight bookings and   user-submitted local stories with the help Google API.",
+      brief: "Led the development of a comprehensive tourism platform using the Google API, incorporating features such as hotel search, virtual tours, and flight bookings, enhancing user engagement through interactive travel stories.",
       imageSrc: tourifyImage,
-      detailsLink: "#",
-      githubLink: "#"
+      detailsLink: "https://github.com/YogiJi21/Tourify-React-App/blob/70194211844e420aeccb0bd3d2789877d12b0de1/README.md",
+      githubLink: "https://github.com/YogiJi21/Tourify-React-App.git"
     },
     {
       id: 3,
-      title: "Zammy News",
-      brief: "Designed a website using React Framework and Google's news API displaying current news on sub-topics listed in nav-bar.",
-      imageSrc: zammyImage,
-      detailsLink: "#",
-      githubLink: "#"
+      title: "Eco - Tracker React App",
+      brief: "Developed a MERN-based Eco Tracker app that calculates carbon emissions from daily activities and recommends actionable steps to reduce the carbon footprint. ",
+      imageSrc: ecotracImage,
+      detailsLink: "https://github.com/YogiJi21/Eco-Tracker-React-App/blob/8f31d3fddca75dd64cc94c6435ae836c5a6d3f20/README.md",
+      githubLink: "https://github.com/YogiJi21/Eco-Tracker-React-App.git"
     },
     {
       id: 4,
+      title: "Zammy News",
+      brief: "Developed a news website using React and Google News API, displaying real-time news updates by category, improving user engagement with topical news content.",
+      imageSrc: zammyImage,
+      detailsLink: "https://github.com/YogiJi21/Zammy-News-React-App/blob/920f5d2f5df5d12a10a110e8614480eb9c24edee/README.md",
+      githubLink: "https://github.com/YogiJi21/Zammy-News-React-App.git"
+    },
+    {
+      id: 5,
       title: "Multiplex Management System",
-      brief: "Developed a Project using .NET utilizing MySQL for data management. Specializes in developing efficient and user-friendly solutions with a focus on security and performance optimization.",
+      brief: "Engineered a multiplex management system in .NET, utilizing MySQL for optimized data management with enhanced security and performance.",
       imageSrc: multiplexImage,
       detailsLink: "#",
       githubLink: "#"

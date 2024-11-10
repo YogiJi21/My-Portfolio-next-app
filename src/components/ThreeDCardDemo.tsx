@@ -52,12 +52,14 @@ export default function ThreeDCardDemo({
             href={detailsLink}
             target="__blank"
             className="px-4 py-2 rounded-xl text-xs font-normal text-white"
-          >
+            >
             Check Details →
           </CardItem>
           <CardItem
             translateZ={20}
-            as="button"
+            as={Link}
+            href={githubLink}
+            target="__blank"
             className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold"
           >
             GitHub
