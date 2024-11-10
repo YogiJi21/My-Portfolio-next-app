@@ -17,7 +17,6 @@ A modern, dynamic portfolio website built with Next.js 15, showcasing my project
 - Downloadable resume
 - Easy access to contact information and social links
 - Project showcase with detailed descriptions
-- Dark/Light mode support
 - Fast performance and SEO optimized
 
 ## 🚀 Getting Started
@@ -102,7 +101,7 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 # Hey there! 👋 I'm Yogesh Hingorani
 
 ## 👨‍💻 About Me
-- 🎓 Currently pursuing MCA from VTU University, Bengaluru (CGPA: 7.5)
+- 🎓 MCA Graduate from VTU University, Bengaluru (CGPA: 7.5)
 - 💻 Post-Graduate Developer specializing in React.js, Next.js, and TypeScript
 - 🌟 Strong foundation in Python, Java, C, and C++
 - 📍 Based in Gurugram, India
